@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cartelera>
+ <pelicula>
+  <titulo_espanol>AQUELLAS JUERGAS UNIVERSITARIAS</titulo_espanol>
+  <titulo>’Old School’</titulo>
+  <pais>EEUU</pais>
+  <anio>2003</anio>
+  <duracion>93 min</duracion>
+  <director>Todd Phillips</director>
+  <interpretes>
+   <interprete>Will Ferrell</interprete>
+   <interprete>Luke Wilson</interprete>
+   <interprete>Vince Vaughn</interprete>
+   <interprete>Jeremy Piven</interprete>
+   <interprete>Juliette Lewis</interprete>
+   <interprete>Sean William Scott</interprete>
+  </interpretes>
+  <sinopsis>Mitch, Frank y Beanie son tres amigos treintañeros cuyas vidas no son exactamente lo que
+esperaban. Mitch tiene una novia ninfómana que se mete en la cama con el primero
+que agarra. Frank se ha casado y su matrimonio nada tiene que ver con
+las juergas salvajes que organizaban años atrás. Y Beanie es un padre de familia que se
+muere por recuperar su alocada juventud. Pero las cosas cambian cuando Beanie sugiere
+que creen su propia fraternidad, en la nueva casa que Mitch tiene junto al campus de la
+universidad. Una ocasión para revivir tiempos gloriosos, hacer nuevos amigos y de volver
+a sus viejas, salvajes y desmadradas juergas de estudiantes.</sinopsis>
+  <web>http://www.oldschool-themovie.com/</web>
+  <clasificacion>Comedia autorizada para mayores de 16 años</clasificacion>
+  <cartel fichero="cartel_oldschool.png" />
+ </pelicula>
+ 
+ <pelicula>
+  <titulo_espanol>SIN ESCAPE</titulo_espanol>
+  <titulo>’Getaway’</titulo>
+  <pais>EEUU</pais>
+  <anio>2013</anio>
+  <duracion>90 min</duracion>
+  <director>Courtney Solomon</director>
+  <interpretes>
+   <interprete>Ethan Hawke</interprete>
+   <interprete>Selena Gomez</interprete>
+   <interprete>Jon Voight</interprete>
+   <interprete>Paul Freeman</interprete>
+  </interpretes>
+  <sinopsis>Brent Magna (Ethan Hawke), un piloto de coches de carreras, tiene que afrontar una difícil misión cuando su esposa es secuestrada. Solo cuenta con la ayuda de una joven hacker (Selena Gomez), y su única esperanza de salvar a su esposa es seguir las órdenes de la voz misteriosa que vigila todos sus movimientos mediante cámaras montadas en el coche que conduce Brent.</sinopsis>
+  <web></web>
+  <clasificacion>Comedia autorizada para mayores de 16 años</clasificacion>
+  <cartel fichero="cartel_getaway.png" />
+ </pelicula>
+</cartelera>
