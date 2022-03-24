@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE persona SYSTEM "ubicacion">--> <!-- DTD externo -->
+<!DOCTYPE persona [ <!-- DTD interno -->
+<!ELEMENT persona (nombre,apellidos,direccion,(hombre|mujer),hijos?)> <!-- | (or)  ? (opcional)  , (separador en orden) -->
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT direccion (#PCDATA|provincia|poblacion)*> <!-- contenido mixto -->
+<!ELEMENT provincia (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+<!ELEMENT hombre EMPTY>
+<!ELEMENT mujer EMPTY>
+<!ELEMENT hijos (hijo*)> <!-- * (DESDE 0 HASTA FIN)   + (AL MENOS 1) -->
+<!ELEMENT hijo (#PCDATA)>
+]>
+<persona>
+ <nombre>Miguel</nombre>
+ <apellidos>Martinez Pérez</apellidos>
+ <direccion> <!-- contenido mixto -->
+  <provincia>Málaga</provincia>
+  Calle Santo Cristo
+   <poblacion>Istán</poblacion>
+ </direccion> <!-- fin de contenido mixto -->
+ <hombre></hombre>
+ <hijos>
+  <hijo>Juan</hijo>
+  <hijo>Pedro</hijo>
+ </hijos>
+</persona>

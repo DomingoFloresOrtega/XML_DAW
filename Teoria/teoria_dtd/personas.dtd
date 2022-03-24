@@ -1,0 +1,4 @@
+<!-- DTD externo -->
+<!ELEMENT persona (nombre|apellidos)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
