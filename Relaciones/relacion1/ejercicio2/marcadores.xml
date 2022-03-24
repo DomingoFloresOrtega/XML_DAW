@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<marcadores>
+ <marcador1>
+  <titulo>Alborán</titulo>
+  <descripcion_breve>Web del IES Mar de Alboran</descripcion_breve>
+  <url>http://www.alboran.com</url>
+ </marcador1>
+ 
+ <marcador2>
+  <titulo>Wikipedia</titulo>
+  <descripcion_breve>La enciclopedia libre.</descripcion_breve>
+  <url>http://www.wikipedia.org</url>
+ </marcador2>
+ 
+ <marcador3>
+  <titulo>W3C</titulo>
+  <descripcion_breve>World Wide Web Consortium.</descripcion_breve>
+  <url>http://www.w3.org</url>
+ </marcador3>
+</marcadores>
