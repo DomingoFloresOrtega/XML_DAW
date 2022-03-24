@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jugadores>
+ <equipo1 nombre="FC Barcelona" ciudad="Barcelona" entrenador="">
+  <jugador1 posicion="Medio">
+   <nombre>Antonio</nombre>
+   <nacionalidad>Española</nacionalidad>
+  </jugador1>
+  
+  <jugador2 posicion="Portera">
+   <nombre>Maria</nombre>
+   <nacionalidad>Española</nacionalidad>
+  </jugador2>
+ </equipo1>
+ 
+ <equipo2 nombre="Real Madrid" ciudad="Madrid" entrenador="">
+  <jugador1 posicion="Defensa">
+   <nombre>Kleskiu</nombre>
+   <nacionalidad>Alemana</nacionalidad>
+  </jugador1>
+  
+  <jugador2 posicion="Delantero">
+   <nombre>Richard</nombre>
+   <nacionalidad>Inglesa</nacionalidad>
+  </jugador2>
+ </equipo2>
+</jugadores>
