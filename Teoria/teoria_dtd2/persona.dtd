@@ -1,0 +1,25 @@
+<!ELEMENT persona (nombre,apellidos,direccion, (hombre|mujer)?)>
+
+<!--(los elementos que tendrá, por orden) espacio entre persona y parentesis SMP-->
+<!--(nombre,apellidos?) LA ? MARCA LA OPCIONALIDAD DEL ELEMENTO.-->
+<!--(nombre?,apellidos?).ambos pueden no aparecer, o aparecer uno y otro no-->
+<!--(nombre|apellidos). O UNO U OTRO-->
+<!--PARA EL ORDEN. que el orden no importe-->
+<!--((nombre,apellidos)|(apellidos,nombre)). el orden NO IMPORTA-->
+<!--+ 1 al infinito, el orden importa 
+* desde 0 hasta infinito, y el orden no importa
+
+-->
+<!--3 elementos. dentro de persona 2 elementos y cada uno de ellos
+guarda un valor-->
+
+<!ELEMENT nombre (#PCDATA)>
+<!--(#PCDATA)cualquier valor. implica NUNCA VACÍO-->
+<!ELEMENT apellidos (#PCDATA)>
+
+<!ELEMENT direccion (calle,poblacion)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+
+<!ELEMENT hombre EMPTY>
+<!ELEMENT mujer EMPTY>

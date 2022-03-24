@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+
+<!--VALIDACION EXTERNA. 
+<!DOCTYPE persona SYSTEM "persona.dtd">-->
+
+<!DOCTYPE persona [
+<!ELEMENT persona (nombre,apellidos,direccion, (hombre|mujer)?)>
+<!ATTLIST persona dni ID
+
+<!--(los elementos que tendrá, por orden) espacio entre persona y parentesis SMP-->
+<!--(nombre,apellidos?) LA ? MARCA LA OPCIONALIDAD DEL ELEMENTO.-->
+<!--(nombre?,apellidos?).ambos pueden no aparecer, o aparecer uno y otro no-->
+<!--(nombre|apellidos). O UNO U OTRO-->
+<!--PARA EL ORDEN. que el orden no importe-->
+<!--((nombre,apellidos)|(apellidos,nombre)). el orden NO IMPORTA-->
+<!--+ 1 al infinito, el orden importa 
+* desde 0 hasta infinito, y el orden no importa
+
+-->
+<!--3 elementos. dentro de persona 2 elementos y cada uno de ellos
+guarda un valor-->
+
+<!ELEMENT nombre (#PCDATA)>
+<!--(#PCDATA)cualquier valor. implica NUNCA VACÍO-->
+<!ELEMENT apellidos (#PCDATA)>
+
+<!ELEMENT direccion (calle,poblacion)| (poblacion,calle)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT poblacion (#PCDATA)>
+
+<!ELEMENT hombre EMPTY>
+<!ELEMENT mujer EMPTY>
+
+<!ATTLIST poblacion 
+	cod CDATA #REQUIRED
+	habitantes CDATA #IMPLIED
+	
+
+
+>
+<!--#REQUIRED MUST APARECER 
+#IMPLIED  PUEDE O NO APARECER.
+#FIXED "verde" SI APARECE EL CODIGO LO FIJO A UN VALOR DADO
+-->
+
+<!--<!ATTLIST poblacion cod ("verde"|"rojo"|"amarillo") CDATA #IMPLIED>
+means: si aparece, debe ser o verde o rojo o amarillo -->
+
+<!--<!ATTLIST poblacion cod ("verde") CDATA #REQUIRED
+means: tiene que llevar cod en poblacion>
+-->
+
+<!--POBLACION tiene un atributo codigo que ADEMAS
+tiene que aparecer. -->
+
+
+
+<!--TIPOS DE ETIQUETAS
+CDATA todo
+NMTOKEN  un valor que cumple con un nombre válido de una etiqueta
+poblacion habitantes="el234" osea esto si
+ 
+NMTOKENS secuencia de tokens
+class=
+-->
+]>
+
+<!--VALIDACION INTERNA. -->
+<persona dni="_2345432N">
+	<nombre>Juan</nombre>
+	<apellidos>Santos</apellidos>
+	<direccion>
+		<calle>Teodoro Rojo, 1 </calle>
+		
+		<poblacion habitantes="1984" cod="12345" >Estepona</poblacion>
+		<!-- cod="miau miau MIAU" si es REQUIRED-->
+	</direccion>
+	<hombre/> <!-- <mujer/> -->
+	
+	
+	<!--validacio externa https://www.xmlvalidation.com/
+	al cargar un nuevo documento se recomienda reiniciar, xk a veces se
+	queda block
+	-->
+</persona>
+
+
