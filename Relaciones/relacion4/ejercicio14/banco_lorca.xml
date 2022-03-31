@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE banco SYSTEM "banco_lorca.dtd">
+
+<banco>
+ <sucursal id="01">
+  <cc id="cc1">
+   <titular nif="23410987O" permiso="titular" numprestamos="0">Alfredo Gomez</titular>
+   <domicialiacion>
+    <recibo>Nomina</recibo>
+   </domicialiacion>
+  </cc>
+
+  <cc id="02">
+   <titular nif="34520987U" permiso="titular" numprestamos="1">Antonio Machado</titular>
+  </cc>
+ </sucursal>
+
+ <sucursal id="02">
+  <cc id="cc1">
+   <titular nif="12345329L" permiso="titular" numprestamos="0">Pedro Martinez</titular>
+  </cc>
+
+  <cc id="02">
+   <titular nif="00342918L" permiso="titular" numprestamos="2">Jose Manuel Fernandez</titular>
+   <titular nif="88921232P" permiso="autorizado" numprestamos="0">Antonio Perez</titular>
+  </cc>
+ </sucursal>
+</banco>
