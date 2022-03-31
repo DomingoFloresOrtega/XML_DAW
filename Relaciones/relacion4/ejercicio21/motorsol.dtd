@@ -1,0 +1,13 @@
+<!ELEMENT motorsol (empleados+,motor*)>
+<!ELEMENT empleados (empleado)+>
+<!ELEMENT empleado (nombre,direccion)>
+<!ATTLIST empleado id CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT motor (responsable,piezas)>
+<!ATTLIST motor seccion CDATA #REQUIRED>
+<!ELEMENT responsable (#PCDATA)>
+<!ATTLIST responsable empleados NMTOKENS #IMPLIED>
+<!ELEMENT piezas (pieza)+>
+<!ELEMENT pieza (#PCDATA)>
+<!ATTLIST pieza id ID #REQUIRED>
