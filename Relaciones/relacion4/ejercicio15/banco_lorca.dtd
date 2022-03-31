@@ -1,0 +1,9 @@
+<!ELEMENT banco (sucursal)+>
+<!ELEMENT sucursal (cc)*>
+<!ELEMENT cc (titular+,domicialiacion?)>
+<!ELEMENT titular (#PCDATA)>
+<!ELEMENT domicialiacion (recibo*)>
+<!ELEMENT recibo (#PCDATA)>
+<!ATTLIST sucursal id CDATA #REQUIRED>
+<!ATTLIST cc id CDATA #REQUIRED>
+<!ATTLIST titular nif CDATA #REQUIRED permiso CDATA #REQUIRED numprestamos CDATA #IMPLIED>
