@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE libreta SYSTEM "libreta_direcciones.dtd">
+
+<libreta>
+ <direccion>
+  <usuario>Fernando Gomez</usuario>
+  <telefono>952349057</telefono>
+  <email>fernandogomez@gmail.com</email>
+  <domicilio codpostal="34109">Calle San Marcos 8, Madrid</domicilio>
+ </direccion>
+ 
+ <direccion>
+  <usuario>Maria Fernandez</usuario>
+  <telefono>951329048</telefono>
+  <telefono>617324908</telefono>
+  <email>mariafernandez@gmail.com</email>
+  <domicilio codpostal="29430">Calle San Fernando Martin, Huelva</domicilio>
+ </direccion>
+</libreta>
