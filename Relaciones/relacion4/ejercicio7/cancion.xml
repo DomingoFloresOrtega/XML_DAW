@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cancion[
+<!ELEMENT cancion (titulo,compositores,productores,sello,artista)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT compositores (compositor)>
+<!ELEMENT compositor (nombres,apellidos)>
+<!ELEMENT nombres (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT productores (productor)>
+<!ELEMENT productor (nombres,apellidos)>
+<!ELEMENT sello (#PCDATA)>
+<!ELEMENT artista (#PCDATA)>
+<!ATTLIST cancion duracion CDATA #REQUIRED anio CDATA #REQUIRED>
+]>
+
+<cancion duracion="4:47" anio="2008">
+ <titulo>Give ut 2 me</titulo>
+ <compositores>
+  <compositor>
+   <nombres>Pharrell</nombres>
+   <apellidos>Williams</apellidos>
+  </compositor>
+ </compositores>
+ <productores>
+  <productor>
+   <nombres>Pharrell</nombres>
+   <apellidos>Williams</apellidos>
+  </productor>
+ </productores>
+ <sello>Warner Bros Records</sello>
+ <artista>Madonna</artista>
+</cancion>
