@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE buzon SYSTEM "Buzon_correos.dtd">
+
+<buzon sucursal="_30">
+ <carta numero="_100">
+  <remitente>Juan Martinez</remitente>
+  <destinatario>Francisco Ramos</destinatario>
+  <direccion>Calle Castilla 8, Madrid</direccion>
+ </carta>
+ 
+ <paquete numero="_850">
+  <remitente>Joaquin Rodriguez</remitente>
+  <destinatario>Francisco Gallardo</destinatario>
+  <direccion>Calle Martin Martin 7, Huelva</direccion>
+  <pagado />
+ </paquete>
+</buzon>
