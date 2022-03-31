@@ -1,0 +1,10 @@
+<!ELEMENT buzon (carta | paquete)+>
+<!ELEMENT carta (remitente, destinatario, direccion)>
+<!ELEMENT paquete (remitente, destinatario, direccion, pagado?)>
+<!ELEMENT remitente (#PCDATA)>
+<!ELEMENT destinatario (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT pagado EMPTY>
+<!ATTLIST buzon sucursal CDATA #REQUIRED>
+<!ATTLIST carta numero ID #REQUIRED>
+<!ATTLIST paquete numero ID #REQUIRED>
