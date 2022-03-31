@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE motorsol SYSTEM "motorsol.dtd">
+
+<motorsol>
+ <empleados>
+   <empleado id="am">
+    <nombre>A. Martinez</nombre>
+    <direccion>Calle San Martin 19, Madrid</direccion>
+   </empleado>
+   <empleado id="ff">
+    <nombre>F. Fernandez</nombre>
+    <direccion>Calle Martin 20, Madrid</direccion>
+   </empleado>
+   <empleado id="vg">
+    <nombre>V. Gutierrez</nombre>
+    <direccion>Avenida de la Constitucion 3, Madrid</direccion>
+   </empleado>
+ </empleados>
+ 
+ <motor seccion="deportivos">
+  <responsable empleados="ff">Adrian Martinez</responsable>
+  <piezas>
+   <pieza id="_100">Correa distribución</pieza>
+   <pieza id="_50">Deposito aceite</pieza>
+  </piezas>
+ </motor>
+ 
+ <motor seccion="hibridos">
+  <responsable empleados="ff vg">Adrian Martinez</responsable>
+  <piezas>
+   <pieza id="_88">Bateria Extreme</pieza>
+   <pieza id="_51">Liquido refrigerante</pieza>
+  </piezas>
+ </motor>
+</motorsol>
