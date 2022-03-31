@@ -1,0 +1,7 @@
+<!ELEMENT libreta (direccion+)>
+<!ELEMENT direccion (usuario,telefono+,email,domicilio)>
+<!ELEMENT usuario (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT domicilio (#PCDATA)>
+<!ATTLIST domicilio codpostal CDATA #REQUIRED>
