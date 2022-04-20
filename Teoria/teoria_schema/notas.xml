@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<notas>
+<notas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="notas.xsd">
     Juan Pedro
-    <nota xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="notas.xsd">
-    <de>Juan</de> <!-- Elemento simple -->
-    <para>Pedro</para> <!-- Elemento simple -->
-    <!-- <titulo>Recordatorio</titulo> --> <!-- Elemento simple -->
-    <fecha>2022-09-22</fecha> <!-- Elemento simple -->
-    <contenido>A las 7:00 pon despertador para ir instituto</contenido> <!-- Elemento simple -->
+    <nota>
+     <de>Juan</de> <!-- Elemento simple -->
+     <para>Pedro</para> <!-- Elemento simple -->
+     <!-- <titulo>Recordatorio</titulo> --> <!-- Elemento simple -->
+     <fecha>2022-09-22</fecha> <!-- Elemento simple -->
+     <contenido>A las 7:00 pon despertador para ir instituto</contenido> <!-- Elemento simple -->
     </nota>
 
-    <nota xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="notas.xsd">
-        <de>Juan</de> <!-- Elemento simple -->
-        <para>Pedro</para> <!-- Elemento simple -->
-        <titulo>Recordatorio</titulo> <!-- Elemento simple -->
-        <!-- <fecha>2022-09-22</fecha> --> <!-- Elemento simple -->
-        <contenido>A las 7:00 pon despertador para ir instituto</contenido> <!-- Elemento simple -->
-        </nota>
+    <nota>
+     <de>Juan</de> <!-- Elemento simple -->
+     <para>Pedro</para> <!-- Elemento simple -->
+     <titulo>Recordatorio</titulo> <!-- Elemento simple -->
+     <!-- <fecha>2022-09-22</fecha> --> <!-- Elemento simple -->
+     <contenido>A las 7:00 pon despertador para ir instituto</contenido> <!-- Elemento simple -->
+    </nota>
 </notas>
