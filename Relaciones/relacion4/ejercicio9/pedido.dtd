@@ -1,0 +1,12 @@
+<!ELEMENT Pedido (Destino, Ordenante, Observaciones, Contenido)>
+<!ATTLIST Pedido fecha CDATA #REQUIRED>
+<!ENTITY % domicilio "Direccion, Ciudad, CodPostal">
+<!ELEMENT Destino (Nombre, %domicilio;, Autorizada?)>
+<!ELEMENT Ordenante (Nombre, %domicilio;)>
+<!ELEMENT Pago (Nombre, %domicilio;, Total)>
+<!ELEMENT Nombre (#PCDATA)>
+<!ELEMENT Direccion (#PCDATA)>
+<!ELEMENT Ciudad (#PCDATA)>
+<!ELEMENT CodPostal (#PCDATA)>
+<!ELEMENT Observaciones (#PCDATA)>
+<!ELEMENT Contenido (Producto+)>
