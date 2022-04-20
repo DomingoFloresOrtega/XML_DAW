@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema>
+    <element name="vehiculos">
+        <complexType>
+            <sequence>
+                <element name="vehiculo" />
+            </sequence>
+        </complexType>
+    </element>
+</schema>
