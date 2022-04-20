@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Elementos simple (solo guarda texto) y elementos complejos -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- Importamos -->
+ <!-- Modo anidado -->
+ <xs:element name="nota" type="tipoNota">
+  <xs:complexType name="tipoNota">
+   <xs:sequence>
+    <xs:element name="de" type="xs:string" />
+    <xs:element name="para" type="xs:string" />
+    <xs:element name="titulo" type="xs:string" />
+    <xs:element name="contenido" type="xs:string" />
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ <!-- Modo anidado -->
+</xs:schema>
+
+<!-- Mas rapido y organizado
+
+<xs:element name="nota" type="tipoNota" />
+  
+  <xs:complexType name="tipoNota">
+   <xs:sequence>
+    <xs:element name="de" type="xs:string" />
+    <xs:element name="para" type="xs:string" />
+    <xs:element name="titulo" type="xs:string" />
+    <xs:element name="contenido" type="xs:string" />
+   </xs:sequence>
+  </xs:complexType>
+ 
+-->
