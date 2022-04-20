@@ -3,7 +3,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <!-- Importamos -->
  <!-- Modo anidado -->
  <xs:element name="notas">
-   <xs:complexType>
+   <xs:complexType mixed="true">
     <xs:sequence>
       <xs:element name="nota" minOccurs="2" maxOccurs="2" /> <!-- Minimos y máximos -->
     </xs:sequence>
@@ -11,7 +11,7 @@
  </xs:element>
 
  <xs:element name="nota">
-  <xs:complexType mixed="true">
+  <xs:complexType>
    <xs:sequence> <!-- all (todo) | sequence () | choice (uno u otro) -->
     <xs:element name="de" type="xs:string" />
     <xs:element name="para" type="xs:string" />
