@@ -1,11 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<schema>
-    <element name="vehiculos">
-        <complexType>
-            <sequence>
-                <element name="vehiculo" />
-            </sequence>
-        </complexType>
-    </element>
-</schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="vehiculos" type="tipoVehiculos" />
+    <xs:complexType name="tipoVehiculos">
+        <xs:element name="vehiculo" type="tipoVehiculo" />
+    </xs:complexType>
+
+    <xs:complexType name="tipoVehiculo">
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" />
+                <xs:element name="modelo" type="xs:string" />
+                <xs:element name="fabricacion" type="tipoFabricacion" />
+                <xs:element name="modificaciones" type="tipoModificaciones" />
+            </xs:sequence>
+        </xs:complexType>
+
+    <xs:complexType name="tipoFabricacion">
+            <xs:sequence>
+                <xs:element name="inicio" type="tipoInicio" />
+                <xs:element name="fin" type="tipoFin" />
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:complexType name="tipoInicio">
+            <xs:sequence>
+                <xs:element name="dia" type="xs:string" />
+                <xs:element name="mes" type="xs:string" />
+                <xs:element name="anyo" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:complexType name="tipoFin">
+            <xs:sequence>
+                <xs:element name="dia" type="xs:string" />
+                <xs:element name="mes" type="xs:string" />
+                <xs:element name="anyo" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:complexType name="tipoModificaciones">
+            <xs:sequence>
+                <xs:element name="modificacion" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+</xs:schema>
