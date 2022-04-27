@@ -3,7 +3,9 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="vehiculos" type="tipoVehiculos" />
     <xs:complexType name="tipoVehiculos">
-        <xs:element name="vehiculo" type="tipoVehiculo" />
+        <xs:sequence>
+            <xs:element name="vehiculo" type="tipoVehiculo" />
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="tipoVehiculo">
@@ -40,7 +42,7 @@
 
         <xs:complexType name="tipoModificaciones">
             <xs:sequence>
-                <xs:element name="modificacion" type="xs:string" />
+                <xs:element name="modificacion" type="xs:string" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
 </xs:schema>
