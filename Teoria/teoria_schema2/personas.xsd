@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="persona" type="tipoPersona" />
+    <xs:complexType name="tipoPersona">
+        <xs:sequence>
+            <xs:element name="datos" type="tipoDatos" />
+            <xs:element name="precio" type="tipoPrecio" />
+        </xs:sequence>
+        <xs:attribute name="nacimiento" type="xs:string" />
+    </xs:complexType>
+
+    <xs:complexType name="tipoDatos">
+        <xs:sequence>
+            <xs:element name="nombre" type="tipoNombre" />
+            <xs:element name="apellidos" type="tipoApellidos" />
+            <xs:element name="dni" type="tipoDni" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Habilitar restricciones -->
+    <xs:simpleType name="tipoPrecio">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="7" /> <!-- Maximo de digitos que puede admitir -->
+            <xs:fractionDigits value="2" /> <!-- Maximo de decimales que puede admitir -->
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="tipoNombre">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Pepe" />
+            <xs:enumeration value="Juan" />
+            <xs:enumeration value="Maria" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoApellidos">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="15" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoDni">
+        <xs:restriction base="xs:string">
+            <!-- <xs:minInclusive value="100000000" />
+            <xs:maxInclusive value="999999999" /> -->
+            <xs:pattern value="[0-9]{8}[-][A-Za-z]"></xs:pattern> <!-- Seguir parametro -->
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
