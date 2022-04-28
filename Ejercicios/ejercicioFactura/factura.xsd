@@ -38,12 +38,12 @@
             <xs:element name="forma_pago" type="tipoPago" />
             <xs:element name="importe_total" type="tipoImporte" />
         </xs:sequence>
-        <xs:attribute name="moneda" type="tipoMoneda" use="required" />
+        <xs:attribute name="moneda" type="tipoMoneda" use="required" /> <!-- se podria hacer con fixed -->
     </xs:complexType>
 
     <xs:complexType name="tipoAlquileres">
         <xs:sequence>
-            <xs:element name="fecha" type="xs:string" />
+            <xs:element name="fecha" type="xs:date" />
             <xs:element name="peliculas" type="tipoPeliculas" />
         </xs:sequence>
     </xs:complexType>
