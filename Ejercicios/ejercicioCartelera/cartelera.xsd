@@ -33,6 +33,15 @@
     </xs:complexType>
 
     <xs:complexType name="tipoClasificacion">
-        <xs:attribute name="edad" type="xs:string" />
+        <xs:attribute name="edad" type="tipoClasificaciones" />
     </xs:complexType>
+    <xs:simpleType name="tipoClasificaciones">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="tp" />
+            <xs:enumeration value="8" />
+            <xs:enumeration value="12" />
+            <xs:enumeration value="16" />
+            <xs:enumeration value="18" />
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
