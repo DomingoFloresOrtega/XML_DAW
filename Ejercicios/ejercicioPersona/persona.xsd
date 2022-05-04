@@ -11,9 +11,13 @@
     <xs:complexType name="tipoPersona">
         <xs:sequence>
             <xs:element name="nombre" type="tipoNombre" />
-            <xs:element name="nacimiento" type="tipoNacimiento" /> <!-- revisar -->
-            <xs:element name="direccion" type="tipoDireccion" minOccurs="1" maxOccurs="unbounded" />
-            <xs:element name="varon" />
+            <xs:element name="nacimiento" type="tipoNacimiento" minOccurs="0
+            " />
+            <xs:element name="direcciones" type="tipoDirecciones" minOccurs="0" />
+            <xs:choice>
+                <xs:element name="varon" type="tipoSexo" />
+                <xs:element name="hembra" type="tipoSexo" />
+            </xs:choice>
         </xs:sequence>
     </xs:complexType>
 
@@ -23,24 +27,58 @@
         <xs:attribute name="anyo" type="tipoAnyo" />
     </xs:complexType>
 
-    <xs:complexType name="tipoDireccion">
+    <xs:complexType name="tipoDirecciones">
         <xs:sequence>
-            <xs:element name="calle" type="xs:string" />
-            <xs:element name="poblacion" type="xs:string" />
-            <xs:element name="provincia" type="xs:string" />
-            <xs:element name="cpostal" type="xs:string" />
+            <xs:element name="direccion" type="tipoDireccion" maxOccurs="unbounded" />
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="tipoDireccion">
+        <xs:sequence>
+            <xs:element name="calle" type="tipoCalle" minOccurs="0" />
+            <xs:element name="poblacion" type="tipoPoblacion" minOccurs="0" />
+            <xs:element name="provincia" type="tipoProvincia" minOccurs="0" />
+            <xs:element name="cpostal" type="tipoCodPostal" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tipoSexo" />
+
+    <xs:simpleType name="tipoCalle">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoPoblacion">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoProvincia">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoCodPostal">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="10000" />
+            <xs:maxInclusive value="99999" />
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="tipoNombre">
         <xs:restriction base="xs:string">
-            <xs:
+            <xs:maxLength value="50" />
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="tipoDia">
         <xs:restriction base="xs:positiveInteger">
-            <xs:pattern value="[1-31]"/>
+            <xs:minInclusive value="1" />
+            <xs:maxExclusive value="31" />
         </xs:restriction>
     </xs:simpleType>
 
@@ -61,9 +99,10 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="tipoDia">
+    <xs:simpleType name="tipoAnyo">
         <xs:restriction base="xs:positiveInteger">
-            <xs:pattern value="[1-31]"/>
+            <xs:minInclusive value="1500" />
+            <xs:maxExclusive value="2050" />
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
