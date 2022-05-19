@@ -26,6 +26,9 @@
                                     <xsl:when test="año &gt; 2000">
                                         <td class="verde"><xsl:value-of select="titulo" /></td>
                                     </xsl:when>
+                                    <xsl:when test="año = 2000">
+                                        <td><xsl:value-of select="titulo" /></td>
+                                    </xsl:when>
                                     <xsl:otherwise>
                                         <td class="rojo"><xsl:value-of select="titulo" /></td>
                                     </xsl:otherwise>
