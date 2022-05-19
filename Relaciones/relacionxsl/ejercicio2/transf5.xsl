@@ -7,12 +7,12 @@
                 <meta charset="UTF-8" />
             </head>
             <body>
-                <h1>Títulos de libros</h1>
+                <h1>Autores Españoles</h1>
                 <ol>
-                    <xsl:for-each select="bib/libro">
-                        <xsl:if test="precio &lt; 100">
+                    <xsl:for-each select="catalogo/artistas/artista">
+                        <xsl:if test="nacionalidad = España">
                             <li>
-                                <xsl:value-of select="titulo" />
+                                <xsl:value-of select="nombre" />
                             </li>
                         </xsl:if>
                     </xsl:for-each>

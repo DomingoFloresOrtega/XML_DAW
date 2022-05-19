@@ -28,17 +28,15 @@
                                 <xsl:value-of select="precio" />
                             </td>
 
-                            <td>
                                 <!-- Titulo de libro -->
                                 <xsl:choose>
                                     <xsl:when test="precio &gt; 100">
-                                        <span class="fondorojo"><xsl:value-of select="titulo" /></span>
+                                        <td class="fondorojo"><xsl:value-of select="titulo" /></td>
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:value-of select="titulo" />
                                     </xsl:otherwise>
                                 </xsl:choose>
-                            </td>
 
                             <td>
                                 <!-- Año de publicación -->

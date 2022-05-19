@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="transf4.xsl"?>
+<?xml-stylesheet type="text/xsl" href="transf2.xsl"?>
 <bib url="http://www.uco.es/servicios/biblioteca/" >
     <libro año="1994">
         <titulo>TCP/IP Illustrated</titulo>
