@@ -20,6 +20,7 @@
                     <th>Articulo</th>
                     <th>Cantidad</th>
                     <th>Precio</th>
+                    <th>Imagen</th>
 
                     <xsl:for-each select="tienda/producto">
                     <xsl:sort select="articulo" />
@@ -43,7 +44,8 @@
                                     <td class="rojo"><xsl:value-of select="cantidad" /></td>
                                     <td class="rojo"><xsl:value-of select="precio" /></td>
                                 </xsl:otherwise>
-                            </xsl:choose> 
+                            </xsl:choose>
+                            <td><xsl:attribute name="href"><xsl:value-of select="imagenes/imagen" /></xsl:attribute></td>
                         </tr>
                 </xsl:for-each>
             </table>
