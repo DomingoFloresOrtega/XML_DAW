@@ -12,6 +12,7 @@
                     .verde{background-color: green}
                     .azul{background-color: blue}
                     .rojo{background-color: red}
+                    .imagen{width: 90px; height: 90px}
                 </style>
             </head>
             <body>
@@ -45,7 +46,7 @@
                                     <td class="rojo"><xsl:value-of select="precio" /></td>
                                 </xsl:otherwise>
                             </xsl:choose>
-                            <td><xsl:attribute name="href"><xsl:value-of select="imagenes/imagen" /></xsl:attribute></td>
+                            <td><img class="imagen"><xsl:attribute name="src"><xsl:value-of select="imagen" /></xsl:attribute></img></td>
                         </tr>
                 </xsl:for-each>
             </table>
