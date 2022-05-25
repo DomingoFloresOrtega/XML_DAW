@@ -13,8 +13,10 @@
                         Día <xsl:value-of select="numdia" />
                     </p>
                     <ul>
-                        <li><b><xsl:value-of select="tarea/nombre" />-</b> Prioridad:<xsl:value-of select="tarea/@prioridad" /><br />
-                        De <xsl:value-of select="tarea/hora-ini" /> a <xsl:value-of select="tarea/hora-fin" /></li>
+                        <xsl:for-each select="tarea">
+                            <li><b><xsl:value-of select="nombre" />-</b> Prioridad:<xsl:value-of select="@prioridad" /><br />
+                            De <xsl:value-of select="hora-ini" /> a <xsl:value-of select="hora-fin" /></li>
+                        </xsl:for-each>
                     </ul>
                 </xsl:for-each>
             </body>

@@ -30,29 +30,32 @@
                         </xsl:choose>
                     </p>
                     <ul>
-                        <li><b><xsl:value-of select="tarea/nombre" />-</b> Prioridad:<xsl:value-of select="tarea/@prioridad" /><br />
-                        De <xsl:value-of select="tarea/hora-ini" /> a <xsl:value-of select="tarea/hora-fin" /></li>
+                        <xsl:for-each select="tarea">
+                            <li><b><xsl:value-of select="nombre" /></b> 
+                            <xsl:if test="@prioridad != ''">
+                                - Prioridad:<xsl:value-of select="@prioridad" />
+                            </xsl:if><br />
+                            De <xsl:value-of select="hora-ini" /> a <xsl:value-of select="hora-fin" /></li>
+                        </xsl:for-each>
                     </ul>
-
-                    <p>
-                        <xsl:value-of select="tarea/nombre" />
-                    </p>
                 </xsl:for-each>
 
                 <xsl:for-each select="horario/dia">
-                    <p>
-                        <xsl:value-of select="tarea/nombre" />- <xsl:choose>
-                            <xsl:when test="tarea/hora-ini &gt; 9">
-                                <xsl:text>Mañana</xsl:text>
-                            </xsl:when>
-                            <xsl:when test="tarea/hora-ini &gt; 14">
-                                <xsl:text>Mediodia</xsl:text>
-                            </xsl:when>
-                            <xsl:when test="tarea/hora-ini > 18">
-                                <xsl:text>Tarde</xsl:text>
-                            </xsl:when>
-                        </xsl:choose>
-                    </p>
+                    <xsl:for-each select="tarea">
+                        <p>
+                            <xsl:value-of select="nombre" />- <xsl:choose>
+                                <xsl:when test="hora-ini &lt; 12">
+                                    <xsl:text>Por la mañana</xsl:text>
+                                </xsl:when>
+                                <xsl:when test="hora-ini &lt; 16">
+                                    <xsl:text>Por el mediodia</xsl:text>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>Por la tarde</xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose><br />
+                        </p>
+                    </xsl:for-each>
                 </xsl:for-each>
             </body>
         </html>
