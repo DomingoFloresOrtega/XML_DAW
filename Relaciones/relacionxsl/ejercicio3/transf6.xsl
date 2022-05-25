@@ -22,7 +22,7 @@
                     <th>Precio</th>
 
                     <xsl:for-each select="tienda/producto">
-                    <xsl:sort select="articulo" />
+                    <xsl:sort select="articulo" order="ascending"/>
                         <tr>
                             <xsl:choose>
                                 <xsl:when test="precio &lt;= 100">

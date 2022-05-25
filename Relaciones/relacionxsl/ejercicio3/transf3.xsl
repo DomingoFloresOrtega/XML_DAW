@@ -14,7 +14,10 @@
             <body>
                 <h1>Articulos de la tienda</h1>
                 <table>
-                    <th>Articulos</th>
+                    <tr>
+                        <th>Articulos</th>
+                    </tr>
+                    
                     <xsl:for-each select="tienda/producto">
                         <tr>
                             <td>

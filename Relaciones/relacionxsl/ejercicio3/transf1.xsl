@@ -4,12 +4,12 @@
         <html>
             <head>
                 <title>Transformacion 1</title>
-                <meta charset="UTF-8" />
+                <meta charset="UTF-8" /> <!-- opcional -->
             </head>
             <body>
                 <h1>Articulos de la tienda</h1>
                 <xsl:for-each select="tienda/producto">
-                    <p><xsl:value-of select="articulo" /></p>
+                    <p><xsl:value-of select="articulo" /><!-- fallo comun: no cerrar --></p>
                 </xsl:for-each>
             </body>
         </html>
